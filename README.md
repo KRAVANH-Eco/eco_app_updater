@@ -19,7 +19,9 @@ Init Shore bird
     
 ## Screenshots
 
-![App Screenshot]()
+![Shorebird Config](https://github.com/KRAVANH-Eco/Eco-App-Updater/blob/main/code-snapshot_1.png?raw=true)
+
+![Usage](https://github.com/KRAVANH-Eco/Eco-App-Updater/blob/main/code-snapshot.png?raw=true)
 
 
 ## Authors
