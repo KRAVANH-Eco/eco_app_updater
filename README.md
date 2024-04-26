@@ -23,7 +23,6 @@ Init Shore bird
 
 ![Usage](https://github.com/KRAVANH-Eco/Eco-App-Updater/blob/main/code-snapshot.png?raw=true)
 
-
 ## Authors
 
 - [@Nhor Sopheak](https://github.com/nhorsopheak)
