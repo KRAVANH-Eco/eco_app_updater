@@ -59,14 +59,18 @@ class EcoUpdater {
 
   /// This checks the version status, then displays a platform-specific alert
   /// with buttons to dismiss the update alert, or go to the app store.
-  void showUpdateIfNecessary({required BuildContext context}) async {
+  void showUpdateIfNecessary({
+    required BuildContext context,
+    String title = 'Update Available',
+    String message = 'Now Available for your phone',
+  }) async {
     final VersionStatus? versionStatus = await getVersionStatus();
 
     if (versionStatus != null && versionStatus.canUpdate && context.mounted) {
       final isClick = await DialogMessage().showConfirm(
         context: context,
-        message: 'V ${versionStatus.storeVersion} ${'now_available_for_your_phone'}',
-        title: 'update_available',
+        message: 'V ${versionStatus.storeVersion} $message',
+        title: title,
         confirmLabel: 'update',
       );
       if (isClick) {
@@ -79,11 +83,25 @@ class EcoUpdater {
   }
 
   // shorebird
-  void showPatchAlertIfNecessary({required BuildContext context}) async {
+  showPatchAlertIfNecessary({
+    required BuildContext context,
+    String title = 'Downloading Update',
+    String message = 'The application will restart after the update',
+    double width = 260,
+    double height = 260,
+    Color? loadingColor,
+  }) async {
     final shorebirdCodePush = ShorebirdCodePush();
     final isUpdateAvailable = await shorebirdCodePush.isNewPatchAvailableForDownload();
     if (isUpdateAvailable && context.mounted) {
-      DialogMessage().showDownloadUpdate(context);
+      DialogMessage().showDownloadUpdate(
+        context: context,
+        title: title,
+        message: message,
+        width: width,
+        height: height,
+        loadingColor: loadingColor,
+      );
 
       await Future.delayed(const Duration(seconds: 5));
       await shorebirdCodePush.downloadUpdateIfAvailable();

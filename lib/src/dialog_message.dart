@@ -2,13 +2,13 @@ import 'package:eco_app_updater/src/eco_button.dart';
 import 'package:flutter/material.dart';
 
 class DialogMessage {
-  void showDownloadUpdate(
-    BuildContext context, {
-    double width = 260,
-    double height = 260,
+  void showDownloadUpdate({
+    required BuildContext context,
+    required String title,
+    required String message,
+    required double width,
+    required double height,
     Color? loadingColor,
-    String title = 'Downloading Update',
-    String message = 'The application will restart after the update',
   }) {
     showDialog(
       barrierDismissible: false,
