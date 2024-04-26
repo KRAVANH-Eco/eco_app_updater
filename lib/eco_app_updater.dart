@@ -12,5 +12,7 @@ import 'package:restart_app/restart_app.dart';
 import 'package:shorebird_code_push/shorebird_code_push.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
+export 'package:url_launcher/url_launcher.dart';
+
 part 'src/eco_updater.dart';
-// export 'src/dialog_message.dart';
+part 'src/version_manager.dart';
