@@ -10,7 +10,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  http: ^1.2.1
+  http: ^0.13.0
   package_info_plus: ^8.0.0
   restart_app: ^1.2.1
   shorebird_code_push: ^1.1.3
