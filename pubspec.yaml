@@ -4,13 +4,13 @@ version: 0.0.1
 homepage:
 
 environment:
-  sdk: '>=3.3.4 <4.0.0'
+  sdk: '>=3.3.3 <4.0.0'
   flutter: ">=1.17.0"
 
 dependencies:
   flutter:
     sdk: flutter
-  http: ^0.13.0
+  http: ^1.0.0
   package_info_plus: ^8.0.0
   restart_app: ^1.2.1
   shorebird_code_push: ^1.1.3
