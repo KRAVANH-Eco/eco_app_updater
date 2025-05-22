@@ -90,6 +90,7 @@ class EcoUpdater {
     double width = 260,
     double height = 260,
     Color? loadingColor,
+    Function()? onDone,
   }) async {
     final shorebirdCodePush = ShorebirdCodePush();
     final isUpdateAvailable = await shorebirdCodePush.isNewPatchAvailableForDownload();
@@ -109,7 +110,10 @@ class EcoUpdater {
       if (context.mounted) {
         Navigator.of(context).pop();
       }
-      Restart.restartApp();
+      // Restart.restartApp();
+      if (onDone != null) {
+        onDone();
+      }
     }
   }
 
